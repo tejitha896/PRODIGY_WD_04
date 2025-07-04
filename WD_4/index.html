@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <!-- Welcome Page -->
+  <div id="welcome-page" class="container">
+    <h1 id="welcome-text" class="animate__animated animate__fadeInDown">Welcome!</h1>
+    <p
+      class="animate__animated animate__fadeInUp animate__delay-1s"
+      style="color: white; font-size: 20px; margin-top: 10px; width:600px">
+      Stay updated with real-time weather data powered by a reliable weather API. Check current conditions, temperature, and forecasts for any location instantly</p>
+    <button id="start-weather-btn">Go to Weather App</button>
+  </div>
+
+  <!-- Weather Page -->
+  <div id="weather-page" class="container" style="display: none;">
+    <div class="weather-card">
+      <h1 style="color: green">Weather App</h1>
+      <input
+        type="text"
+        id="city-input"
+        placeholder="Enter Location name"
+        autocomplete="off"
+      />
+      <button id="city-input-btn">Get Weather</button>
+      <div id="weather-info" class="animate__animated animate__fadeIn">
+        <h3 id="city-name"></h3>
+        <p id="date"></p>
+        <img id="weather-icon" src="" alt="Weather Icon" />
+        <p id="temperature"></p>
+        <p id="description"></p>
+        <p id="wind-speed"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://momentjs.com/downloads/moment.min.js"></script>
+
+  <!-- Your Script -->
+  <script src="script.js"></script>
+</body>
+</html>
